@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { Box } from '@mui/material';
 
-function App() {
+import './App.css';
+import Exercises from './components/Exercises';
+import SearchExercises from './components/SearchExercises';
+import ExerciseDetail from './pages/ExerciseDetail';
+import  { useState } from 'react';
+
+
+
+
+
+
+
+
+
+const App = () => {
+  const [exercises, setExercises] = useState([]);
+  const [bodyPart, setBodyPart] = useState('all');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto">
+    
+    <Routes>
+      <Route path="/" />
+      <Route path="/exercise/:id" element={<ExerciseDetail />} />
+    </Routes><Box>
+    <SearchExercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+    
+      <Exercises setExercises={setExercises} exercises={exercises} bodyPart={bodyPart} /></Box>
+
+  </Box>
   );
-}
+};
 
 export default App;
