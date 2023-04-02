@@ -6,7 +6,7 @@ import { exerciseOptions, fetchData } from '../utils/fetchData';
 import ExerciseCard from './ExerciseCard';
 import Loader from './Loader';
 
-const Exercises = ({ exercises, setExercises, bodyPart }) => {
+const Exercises = ({ exercises, setExercises, bodyPart }) => { // eslint-disable-line
   const [currentPage, setCurrentPage] = useState(1);
   const [exercisesPerPage] = useState(6);
 
@@ -19,7 +19,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       } else {
         exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
       }
-
+// eslint-disable-line
       setExercises(exercisesData);
     };
 
