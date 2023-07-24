@@ -1,6 +1,6 @@
 # Fitness Website Readme
 
-![Fitness Website Logo](https://yourwebsite.com/images/logo.png)
+![Fitness Website Logo](https://www.shutterstock.com/image-vector/dumbbell-icon-sign-logo-symbol-600w-1477507961.jpg)
 
 Welcome to our Fitness Website! This document provides an overview of the project and how to set it up and use it effectively.
 
